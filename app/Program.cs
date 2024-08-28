@@ -1,9 +1,11 @@
-
+using app.Infrastructure;
+using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-/* builder.Services.AddDbContext<FilmesNetDbContext>(options => options.UseM) */
+builder.Services.AddDbContext<FilmesNetDbContext>(options => options.UseMySql(builder.Configuration.GetConnectionString("FilmeNet"), new MySqlServerVersion(new Version(8, 0, 26))));
+
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
