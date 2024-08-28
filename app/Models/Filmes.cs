@@ -14,7 +14,7 @@ namespace app.Models
         public required string NomeFilme { get; set; }
 
         [Column("data_alancamento")]
-        public DateTime DataAlancamento { get; set; }
+        public DateTime DataLancamento { get; set; }
 
         [Column("descricao")]
         public required string Descricao { get; set; }

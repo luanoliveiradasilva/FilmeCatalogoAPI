@@ -1,17 +1,21 @@
-using app.Models;
-using app.Repository;
+using app.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace app.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class FilmesNetController(IFilmesRespository repository) : ControllerBase
+    public class FilmesNetController(IFilmesNetServices iFilmesNetServices) : ControllerBase
     {
-        private readonly IFilmesRespository _repository = repository;
+
+        private readonly IFilmesNetServices _filmesNetServices = iFilmesNetServices;
+
+
+        /*      [HttpGet]
+             public async Task<ActionResult<IEnumerable<Filmes>>> GetFilmes() => Ok(await _repository.GetFilmesAsync()); */
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Filmes>>> GetFilmes() => Ok(await _repository.GetFilmesAsync());
+        public async Task<ActionResult> GetFilmes(int pageNumber = 1, int pageSize = 10) => Ok(await _filmesNetServices.GetFilmes(pageNumber, pageSize));
 
     }
 }

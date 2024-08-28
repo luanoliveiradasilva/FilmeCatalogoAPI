@@ -1,5 +1,6 @@
 using app.Infrastructure;
 using app.Repository;
+using app.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,9 +10,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<FilmesNetDbContext>(options => options.UseMySql(builder.Configuration.GetConnectionString("FilmeNet"), new MySqlServerVersion(new Version(8, 0, 26))));
 
 builder.Services.AddScoped<IFilmesRespository, FilmesRespository>();
-
+builder.Services.AddScoped<IFilmesNetServices, FilmesNetServices>();
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
