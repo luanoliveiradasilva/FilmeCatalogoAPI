@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/qVsSgnGOaY=",
+  "dgSpecHash": "fitZBvqGJpE=",
   "success": true,
-  "projectFilePath": "C:\\Users\\luann\\Documents\\Project Software\\FilmeCatalogoAPI\\app\\app.csproj",
+  "projectFilePath": "C:\\Users\\luann\\Documents\\Project Software\\FilmeCatalogoAPI\\App\\App.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\luann\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.8\\microsoft.entityframeworkcore.8.0.8.nupkg.sha512",
     "C:\\Users\\luann\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\8.0.8\\microsoft.entityframeworkcore.abstractions.8.0.8.nupkg.sha512",
