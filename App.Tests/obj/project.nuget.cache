@@ -1,12 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "Y0H+7+2nFHk=",
+  "dgSpecHash": "wiS2l04tF6I=",
   "success": true,
-  "projectFilePath": "C:\\Users\\luann\\Documents\\Project Software\\FilmeCatalogoAPI\\App.Tests\\App.Test.csproj",
+  "projectFilePath": "c:\\Users\\luann\\Documents\\Project Software\\FilmeCatalogoAPI\\App.Tests\\App.Test.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\luann\\.nuget\\packages\\autofixture\\4.18.1\\autofixture.4.18.1.nupkg.sha512",
+    "C:\\Users\\luann\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\luann\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",
     "C:\\Users\\luann\\.nuget\\packages\\coverlet.collector\\6.0.0\\coverlet.collector.6.0.0.nupkg.sha512",
+    "C:\\Users\\luann\\.nuget\\packages\\coverlet.msbuild\\6.0.2\\coverlet.msbuild.6.0.2.nupkg.sha512",
     "C:\\Users\\luann\\.nuget\\packages\\fare\\2.1.1\\fare.2.1.1.nupkg.sha512",
     "C:\\Users\\luann\\.nuget\\packages\\microsoft.codecoverage\\17.8.0\\microsoft.codecoverage.17.8.0.nupkg.sha512",
     "C:\\Users\\luann\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.8\\microsoft.entityframeworkcore.8.0.8.nupkg.sha512",

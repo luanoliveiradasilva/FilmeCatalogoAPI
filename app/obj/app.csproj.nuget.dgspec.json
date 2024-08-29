@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\luann\\Documents\\Project Software\\FilmeCatalogoAPI\\App\\App.csproj": {}
+    "c:\\Users\\luann\\Documents\\Project Software\\FilmeCatalogoAPI\\App\\App.csproj": {}
   },
   "projects": {
-    "C:\\Users\\luann\\Documents\\Project Software\\FilmeCatalogoAPI\\App\\App.csproj": {
+    "c:\\Users\\luann\\Documents\\Project Software\\FilmeCatalogoAPI\\App\\App.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\luann\\Documents\\Project Software\\FilmeCatalogoAPI\\App\\App.csproj",
+        "projectUniqueName": "c:\\Users\\luann\\Documents\\Project Software\\FilmeCatalogoAPI\\App\\App.csproj",
         "projectName": "App",
-        "projectPath": "C:\\Users\\luann\\Documents\\Project Software\\FilmeCatalogoAPI\\App\\App.csproj",
+        "projectPath": "c:\\Users\\luann\\Documents\\Project Software\\FilmeCatalogoAPI\\App\\App.csproj",
         "packagesPath": "C:\\Users\\luann\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\luann\\Documents\\Project Software\\FilmeCatalogoAPI\\App\\obj\\",
+        "outputPath": "c:\\Users\\luann\\Documents\\Project Software\\FilmeCatalogoAPI\\App\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\luann\\AppData\\Roaming\\NuGet\\NuGet.Config",
