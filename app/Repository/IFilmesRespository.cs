@@ -1,10 +1,11 @@
-using app.Models.DTO;
+using app.Models;
+using app.Models.Dtos.Filmes;
 
 namespace app.Repository
 {
     public interface IFilmesRespository
     {
-        /* Task<IEnumerable<Filmes>> GetFilmesAsync(); */
-        Task<IEnumerable<FilmesDTO>> GetFilmesAsync(int pageNumber, int pageSize);
+        Task<IEnumerable<FilmesDto>> GetFilmesAsync();
+        Task<IEnumerable<FilmesAllDTO>> GetFilmesAllDatasAsync(int pageNumber, int pageSize);
     }
 }

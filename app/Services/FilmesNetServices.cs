@@ -1,4 +1,4 @@
-using app.Models.DTO;
+using app.Models.Dtos.Filmes;
 using app.Repository;
 
 namespace app.Services
@@ -7,12 +7,11 @@ namespace app.Services
     {
         private readonly IFilmesRespository _repository = repository;
 
-        public async Task<IEnumerable<FilmesDTO>> GetFilmes(int pageNumber, int pageSize)
-        {
-            var filmesDetalhados = await _repository.GetFilmesAsync(pageNumber, pageSize);
-            
-            return filmesDetalhados;
-        }
+        public async Task<IEnumerable<FilmesDto>> GetFilmes() => await _repository.GetFilmesAsync();
 
+        public async Task<IEnumerable<FilmesAllDTO>> GetFilmesAllDatas(int pageNumber, int pageSize)
+        {
+            return await _repository.GetFilmesAllDatasAsync(pageNumber, pageSize);
+        }
     }
 }

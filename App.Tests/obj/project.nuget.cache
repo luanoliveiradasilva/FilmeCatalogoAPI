@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wiS2l04tF6I=",
+  "dgSpecHash": "JlniZx71eFg=",
   "success": true,
-  "projectFilePath": "c:\\Users\\luann\\Documents\\Project Software\\FilmeCatalogoAPI\\App.Tests\\App.Test.csproj",
+  "projectFilePath": "C:\\Users\\luann\\Documents\\Project Software\\FilmeCatalogoAPI\\App.Tests\\App.Test.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\luann\\.nuget\\packages\\autofixture\\4.18.1\\autofixture.4.18.1.nupkg.sha512",
     "C:\\Users\\luann\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",

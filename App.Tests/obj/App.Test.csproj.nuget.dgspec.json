@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\luann\\Documents\\Project Software\\FilmeCatalogoAPI\\App.Tests\\App.Test.csproj": {}
+    "C:\\Users\\luann\\Documents\\Project Software\\FilmeCatalogoAPI\\App.Tests\\App.Test.csproj": {}
   },
   "projects": {
-    "c:\\Users\\luann\\Documents\\Project Software\\FilmeCatalogoAPI\\App.Tests\\App.Test.csproj": {
+    "C:\\Users\\luann\\Documents\\Project Software\\FilmeCatalogoAPI\\App.Tests\\App.Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\luann\\Documents\\Project Software\\FilmeCatalogoAPI\\App.Tests\\App.Test.csproj",
+        "projectUniqueName": "C:\\Users\\luann\\Documents\\Project Software\\FilmeCatalogoAPI\\App.Tests\\App.Test.csproj",
         "projectName": "App.Test",
-        "projectPath": "c:\\Users\\luann\\Documents\\Project Software\\FilmeCatalogoAPI\\App.Tests\\App.Test.csproj",
+        "projectPath": "C:\\Users\\luann\\Documents\\Project Software\\FilmeCatalogoAPI\\App.Tests\\App.Test.csproj",
         "packagesPath": "C:\\Users\\luann\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\luann\\Documents\\Project Software\\FilmeCatalogoAPI\\App.Tests\\obj\\",
+        "outputPath": "C:\\Users\\luann\\Documents\\Project Software\\FilmeCatalogoAPI\\App.Tests\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\luann\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -29,8 +29,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "c:\\Users\\luann\\Documents\\Project Software\\FilmeCatalogoAPI\\App\\App.csproj": {
-                "projectPath": "c:\\Users\\luann\\Documents\\Project Software\\FilmeCatalogoAPI\\App\\App.csproj"
+              "C:\\Users\\luann\\Documents\\Project Software\\FilmeCatalogoAPI\\App\\App.csproj": {
+                "projectPath": "C:\\Users\\luann\\Documents\\Project Software\\FilmeCatalogoAPI\\App\\App.csproj"
               }
             }
           }
@@ -105,14 +105,14 @@
         }
       }
     },
-    "c:\\Users\\luann\\Documents\\Project Software\\FilmeCatalogoAPI\\App\\App.csproj": {
+    "C:\\Users\\luann\\Documents\\Project Software\\FilmeCatalogoAPI\\App\\App.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\luann\\Documents\\Project Software\\FilmeCatalogoAPI\\App\\App.csproj",
+        "projectUniqueName": "C:\\Users\\luann\\Documents\\Project Software\\FilmeCatalogoAPI\\App\\App.csproj",
         "projectName": "App",
-        "projectPath": "c:\\Users\\luann\\Documents\\Project Software\\FilmeCatalogoAPI\\App\\App.csproj",
+        "projectPath": "C:\\Users\\luann\\Documents\\Project Software\\FilmeCatalogoAPI\\App\\App.csproj",
         "packagesPath": "C:\\Users\\luann\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\luann\\Documents\\Project Software\\FilmeCatalogoAPI\\App\\obj\\",
+        "outputPath": "C:\\Users\\luann\\Documents\\Project Software\\FilmeCatalogoAPI\\App\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\luann\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -147,6 +147,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.8, )"

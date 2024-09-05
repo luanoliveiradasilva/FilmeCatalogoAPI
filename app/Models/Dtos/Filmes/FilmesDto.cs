@@ -1,10 +1,9 @@
 using System.Text.Json.Serialization;
 
-namespace app.Models.DTO
+namespace app.Models.Dtos.Filmes
 {
-    public class FilmesDTO
+    public class FilmesDto
     {
-
         [JsonPropertyName("Nome do Filme")]
         public required string NomeFilme { get; set; }
 
@@ -13,11 +12,5 @@ namespace app.Models.DTO
 
         [JsonPropertyName("Descrição")]
         public required string Descricao { get; set; }
-
-        [JsonPropertyName("Gênero")]
-        public required string TipoDoGenero { get; set; }
-
-        [JsonPropertyName("Diretor")]
-        public required string NomeDiretor { get; set; }
     }
 }

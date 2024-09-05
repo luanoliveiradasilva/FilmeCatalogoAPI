@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "3jVCC+egoIA=",
+  "dgSpecHash": "kAcWBJAa+zs=",
   "success": true,
-  "projectFilePath": "c:\\Users\\luann\\Documents\\Project Software\\FilmeCatalogoAPI\\App\\App.csproj",
+  "projectFilePath": "C:\\Users\\luann\\Documents\\Project Software\\FilmeCatalogoAPI\\App\\App.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\luann\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\luann\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.8\\microsoft.entityframeworkcore.8.0.8.nupkg.sha512",
     "C:\\Users\\luann\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\8.0.8\\microsoft.entityframeworkcore.abstractions.8.0.8.nupkg.sha512",
     "C:\\Users\\luann\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\8.0.8\\microsoft.entityframeworkcore.analyzers.8.0.8.nupkg.sha512",
