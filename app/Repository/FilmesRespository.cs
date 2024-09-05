@@ -1,4 +1,5 @@
 using app.Infrastructure;
+using app.Models.Dtos.Diretores;
 using app.Models.Dtos.Filmes;
 using Microsoft.EntityFrameworkCore;
 
@@ -38,6 +39,17 @@ namespace app.Repository
                 .Skip((pageNumber - 1) * pageSize)
                 .Take(pageSize)
                 .ToListAsync();
+        }
+
+        public async Task<IEnumerable<DiretoresDto>> GetAllDiretoresAsync()
+        {
+            var querySelect = from diretor in dbContext.Diretores
+                              select new DiretoresDto
+                              {
+                                  NomeDiretor = diretor.NomeDiretor
+                              };
+
+            return await querySelect.ToListAsync();
         }
     }
 }

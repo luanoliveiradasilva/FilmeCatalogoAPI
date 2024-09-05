@@ -4,13 +4,12 @@ using app.Repository;
 using app.Models.Dtos.Filmes;
 
 namespace App.Test.Services;
-public class ServiceTest
+public class FilmesServiceTest
 {
-
-    private readonly IFilmesNetServices _filmesNetServices;
     private readonly Mock<IFilmesRespository> _filmesRepositoryMock;
+    private readonly IFilmesNetServices _filmesNetServices;
 
-    public ServiceTest()
+    public FilmesServiceTest()
     {
         _filmesRepositoryMock = new Mock<IFilmesRespository>();
 

@@ -1,4 +1,4 @@
-using app.Models;
+using app.Models.Dtos.Diretores;
 using app.Models.Dtos.Filmes;
 
 namespace app.Repository
@@ -7,5 +7,6 @@ namespace app.Repository
     {
         Task<IEnumerable<FilmesDto>> GetFilmesAsync();
         Task<IEnumerable<FilmesAllDTO>> GetFilmesAllDatasAsync(int pageNumber, int pageSize);
+        Task<IEnumerable<DiretoresDto>> GetAllDiretoresAsync();
     }
 }
