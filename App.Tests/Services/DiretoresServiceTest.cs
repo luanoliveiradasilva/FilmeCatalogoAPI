@@ -5,12 +5,12 @@ using Moq;
 
 namespace App.Tests.Services
 {
-    public class DiretoresServiceTeste
+    public class DiretoresServiceTest
     {
         private readonly Mock<IFilmesRespository> _mockRepository;
         private readonly IDiretoresService _iDiretoresService;
 
-        public DiretoresServiceTeste()
+        public DiretoresServiceTest()
         {
             _mockRepository = new Mock<IFilmesRespository>();
 

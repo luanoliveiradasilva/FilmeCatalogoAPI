@@ -7,13 +7,16 @@ namespace app.Controllers
     [ApiController]
     public class FilmesNetController(
         IFilmesNetServices iFilmesNetServices,
-        IDiretoresService iDiretoresService
+        IDiretoresService iDiretoresService,
+        IGenerosServices iGenerosServices
         ) : ControllerBase
     {
 
         private readonly IFilmesNetServices _filmesNetServices = iFilmesNetServices;
 
         private readonly IDiretoresService _diretoresService = iDiretoresService;
+
+        private readonly IGenerosServices _generosService = iGenerosServices;
 
         [HttpGet]
         public async Task<ActionResult> GetFilmes() => Ok(await _filmesNetServices.GetFilmes());
@@ -23,6 +26,9 @@ namespace app.Controllers
 
         [HttpGet("Diretores")]
         public async Task<ActionResult> GetAllDiretores() => Ok(await _diretoresService.GetAllDiretores());
+
+        [HttpGet("Generos")]
+        public async Task<ActionResult> GetAllGeneros() => Ok(await _generosService.GetAllGeneros());
 
     }
 }

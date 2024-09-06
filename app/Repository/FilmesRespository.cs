@@ -1,6 +1,7 @@
 using app.Infrastructure;
 using app.Models.Dtos.Diretores;
 using app.Models.Dtos.Filmes;
+using app.Models.Dtos.Generos;
 using Microsoft.EntityFrameworkCore;
 
 namespace app.Repository
@@ -49,6 +50,16 @@ namespace app.Repository
                                   NomeDiretor = diretor.NomeDiretor
                               };
 
+            return await querySelect.ToListAsync();
+        }
+
+        public async Task<IEnumerable<GenerosDto>> GetAllGenerosAsync()
+        {
+            var querySelect = from genero in dbContext.Generos
+                              select new GenerosDto
+                              {
+                                  TipoDoGenero = genero.TipoDoGenero
+                              };
             return await querySelect.ToListAsync();
         }
     }
