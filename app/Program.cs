@@ -2,6 +2,7 @@ using app.Infrastructure;
 using app.Repository;
 using app.Services;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 
 var builder = WebApplication.CreateBuilder(args);
 

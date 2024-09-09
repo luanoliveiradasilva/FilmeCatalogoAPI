@@ -18,10 +18,10 @@ namespace app.Controllers
 
         private readonly IGenerosServices _generosService = iGenerosServices;
 
-        /* [HttpGet]
-        public async Task<ActionResult> GetFilmes() => Ok(await _filmesNetServices.GetFilmes());
+     /*    [HttpGet("filmes ")]
+        public async Task<ActionResult> GetFilmes() => Ok(await _filmesNetServices.GetFilmes()); */
 
-        [HttpGet("Movies")]
+        /*[HttpGet("Movies")]
         public async Task<ActionResult> GetFilmes(int pageNumber = 1, int pageSize = 10) => Ok(await _filmesNetServices.GetFilmesAllDatas(pageNumber, pageSize));
 
         [HttpGet("Diretores")]

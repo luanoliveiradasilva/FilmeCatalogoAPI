@@ -37,3 +37,10 @@ c:\Users\luann\Documents\Project Software\FilmeCatalogoAPI\App\obj\Debug\net8.0\
 c:\Users\luann\Documents\Project Software\FilmeCatalogoAPI\App\obj\Debug\net8.0\App.pdb
 c:\Users\luann\Documents\Project Software\FilmeCatalogoAPI\App\obj\Debug\net8.0\App.genruntimeconfig.cache
 c:\Users\luann\Documents\Project Software\FilmeCatalogoAPI\App\obj\Debug\net8.0\ref\App.dll
+C:\Users\luann\Documents\Project Software\FilmeCatalogoAPI\App\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\luann\Documents\Project Software\FilmeCatalogoAPI\App\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\luann\Documents\Project Software\FilmeCatalogoAPI\App\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
+C:\Users\luann\Documents\Project Software\FilmeCatalogoAPI\App\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\luann\Documents\Project Software\FilmeCatalogoAPI\App\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+C:\Users\luann\Documents\Project Software\FilmeCatalogoAPI\App\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
+C:\Users\luann\Documents\Project Software\FilmeCatalogoAPI\App\bin\Debug\net8.0\System.Diagnostics.DiagnosticSource.dll

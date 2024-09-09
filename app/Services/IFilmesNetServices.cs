@@ -1,10 +1,10 @@
-using app.Models.Dtos.Filmes;
+using app.Models;
 
 namespace app.Services
 {
     public interface IFilmesNetServices
     {
-    /*     Task<IEnumerable<FilmesDto>> GetFilmes();
+        Task<IEnumerable<Filmes>> GetAllMovies();/* 
         Task<IEnumerable<FilmesAllDTO>> GetFilmesAllDatas(int pageNumber, int pageSize); */
     }
 }

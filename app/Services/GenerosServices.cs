@@ -1,4 +1,4 @@
-using app.Models.Dtos.Generos;
+using app.Models;
 using app.Repository;
 
 namespace app.Services
@@ -6,11 +6,19 @@ namespace app.Services
     public class GenerosServices(IFilmesRepository iFilmesRespository) : IGenerosServices
     {
 
-/*         private readonly IFilmesRepository _ifilmesRespository = iFilmesRespository;
+        private readonly IFilmesRepository _ifilmesRespository = iFilmesRespository;
 
-        public async Task<IEnumerable<GenerosDto>> GetAllGeneros()
+        public async Task<IEnumerable<Generos>> GetAllGeneros()
         {
-            return await _ifilmesRespository.GetAllGenerosAsync();
-        } */
+            try
+            {
+                return await _ifilmesRespository.GetAllGeneros();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error not found", ex);
+            }
+
+        }
     }
 }

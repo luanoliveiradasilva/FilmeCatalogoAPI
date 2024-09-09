@@ -1,7 +1,4 @@
 using app.Models;
-using app.Models.Dtos.Diretores;
-using app.Models.Dtos.Filmes;
-using app.Models.Dtos.Generos;
 
 namespace app.Repository
 {
