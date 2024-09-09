@@ -127,3 +127,4 @@ C:\Users\luann\Documents\Project Software\FilmeCatalogoAPI\App.Tests\obj\Debug\n
 C:\Users\luann\Documents\Project Software\FilmeCatalogoAPI\App.Tests\obj\Debug\net8.0\App.Test.genruntimeconfig.cache
 C:\Users\luann\Documents\Project Software\FilmeCatalogoAPI\App.Tests\obj\Debug\net8.0\ref\App.Test.dll
 C:\Users\luann\Documents\Project Software\FilmeCatalogoAPI\App.Tests\bin\Debug\net8.0\AutoMapper.dll
+C:\Users\luann\Documents\Project Software\FilmeCatalogoAPI\App.Tests\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.InMemory.dll

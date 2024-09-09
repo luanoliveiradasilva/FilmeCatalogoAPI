@@ -18,7 +18,7 @@ namespace app.Controllers
 
         private readonly IGenerosServices _generosService = iGenerosServices;
 
-        [HttpGet]
+        /* [HttpGet]
         public async Task<ActionResult> GetFilmes() => Ok(await _filmesNetServices.GetFilmes());
 
         [HttpGet("Movies")]
@@ -28,7 +28,7 @@ namespace app.Controllers
         public async Task<ActionResult> GetAllDiretores() => Ok(await _diretoresService.GetAllDiretores());
 
         [HttpGet("Generos")]
-        public async Task<ActionResult> GetAllGeneros() => Ok(await _generosService.GetAllGeneros());
+        public async Task<ActionResult> GetAllGeneros() => Ok(await _generosService.GetAllGeneros()); */
 
     }
 }

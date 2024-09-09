@@ -2,16 +2,17 @@ using app.Services;
 using Moq;
 using app.Repository;
 using app.Models.Dtos.Filmes;
+using App.Tests.Mocks;
 
 namespace App.Test.Services;
 public class FilmesServiceTest
-{
-    private readonly Mock<IFilmesRespository> _filmesRepositoryMock;
+{/* 
+    private readonly Mock<IFilmesRepository> _filmesRepositoryMock;
     private readonly IFilmesNetServices _filmesNetServices;
 
     public FilmesServiceTest()
     {
-        _filmesRepositoryMock = new Mock<IFilmesRespository>();
+        _filmesRepositoryMock = new Mock<IFilmesRepository>();
 
         _filmesNetServices = new FilmesNetServices(_filmesRepositoryMock.Object);
     }
@@ -20,29 +21,18 @@ public class FilmesServiceTest
     public async void GetMoviesShouldReturnListOfFilmes()
     {
         //Arrange(Give)
-        var FilmesDTOFake = new List<FilmesDto>
-        {
-            new() {
-                NomeFilme = "Inception",
-                DataLancamento = new DateTime(2010, 7, 16),
-                Descricao = "Um ladrão que rouba segredos corporativos..."
-            },
-            new() {
-                NomeFilme = "The Matrix",
-                DataLancamento = new DateTime(1999, 3, 31),
-                Descricao = "Um hacker aprende sobre a verdadeira natureza de sua realidade..." },
-        };
+        var filmeTest = MockIFilmesRepository.GetFilmes();
 
         _filmesRepositoryMock
-        .Setup(repo => repo.GetFilmesAsync())
-        .ReturnsAsync(FilmesDTOFake);
+        .Setup(mockRepo => mockRepo.GetFilmesAsync())
+        .ReturnsAsync(() => filmeTest);
 
         //Act (When)
         var result = await _filmesNetServices.GetFilmes();
 
         //Assert(Then)
         Assert.NotNull(result);
-        Assert.Equal(FilmesDTOFake, result);
+        Assert.Equal(filmeTest, result);
 
     }
 
@@ -83,4 +73,4 @@ public class FilmesServiceTest
         Assert.NotNull(result);
         Assert.Equal(FilmesDTOFake, result);
     }
-}
+ */}

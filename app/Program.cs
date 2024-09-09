@@ -9,7 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<FilmesNetDbContext>(options => options.UseMySql(builder.Configuration.GetConnectionString("FilmeNet"), new MySqlServerVersion(new Version(8, 0, 26))));
 
-builder.Services.AddScoped<IFilmesRespository, FilmesRespository>();
+builder.Services.AddScoped<IFilmesRepository, FilmesRepository>();
 builder.Services.AddScoped<IFilmesNetServices, FilmesNetServices>();
 builder.Services.AddScoped<IDiretoresService, DiretoresService>();
 builder.Services.AddScoped<IGenerosServices, GenerosServices>();

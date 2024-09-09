@@ -4,6 +4,6 @@ namespace app.Services
 {
     public interface IDiretoresService
     {
-        Task<IEnumerable<DiretoresDto>> GetAllDiretores();
+        /* Task<IEnumerable<DiretoresDto>> GetAllDiretores(); */
     }
 }

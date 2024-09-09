@@ -4,14 +4,14 @@ using app.Repository;
 
 namespace app.Services
 {
-    public class DiretoresService(IFilmesRespository iFilmesRepository) : IDiretoresService
+    public class DiretoresService(IFilmesRepository iFilmesRepository) : IDiretoresService
     {
-
-        private readonly IFilmesRespository _iFilmesRepository = iFilmesRepository;
+/* 
+        private readonly IFilmesRepository _iFilmesRepository = iFilmesRepository;
 
         public async Task<IEnumerable<DiretoresDto>> GetAllDiretores()
         {
             return await _iFilmesRepository.GetAllDiretoresAsync();
-        }
+        } */
     }
 }
