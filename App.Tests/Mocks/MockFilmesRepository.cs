@@ -4,19 +4,6 @@ namespace App.Tests.Mocks
 {
     internal class MockFilmesRepository
     {
-        /*  public static Mock<IFilmesRepository> GetMock()
-         {
-             var mock = new Mock<IFilmesRepository>();
-
-             var filmes = GetFilmes();
-
-             mock
-             .Setup(mockRepo => mockRepo.GetFilmesAsync())
-             .ReturnsAsync(() => filmes);
-
-             return mock;
-         } */
-
         public static List<Filmes> FilmesMock()
         {
             var fakeFilmes = new List<Filmes>(){

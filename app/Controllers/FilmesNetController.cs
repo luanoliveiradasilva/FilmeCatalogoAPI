@@ -10,7 +10,6 @@ namespace app.Controllers
         IFilmesNetServices iFilmesNetServices,
         IDiretoresService iDiretoresService,
         IGenerosServices iGenerosServices
-
         ) : ControllerBase
     {
         private readonly IFilmesNetServices _filmesNetServices = iFilmesNetServices;

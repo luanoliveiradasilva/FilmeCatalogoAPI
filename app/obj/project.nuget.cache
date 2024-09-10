@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qaUIjZ6bTcE=",
+  "dgSpecHash": "KWlXkOUXcfg=",
   "success": true,
-  "projectFilePath": "C:\\Users\\luann\\Documents\\Project Software\\FilmeCatalogoAPI\\App\\App.csproj",
+  "projectFilePath": "C:\\Users\\luann\\Documents\\Project Software\\FilmeCatalogoAPI\\app\\app.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\luann\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\luann\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.8\\microsoft.entityframeworkcore.8.0.8.nupkg.sha512",
