@@ -8,7 +8,7 @@ namespace app.Services
 
         private readonly IFilmesRepository _ifilmesRespository = iFilmesRespository;
 
-        public async Task<IEnumerable<Generos>> GetAllGeneros()
+        public async Task<IEnumerable<Generos>?> GetAllGeneros()
         {
             try
             {

@@ -1,3 +1,4 @@
+using app.Models;
 using app.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,26 +10,49 @@ namespace app.Controllers
         IFilmesNetServices iFilmesNetServices,
         IDiretoresService iDiretoresService,
         IGenerosServices iGenerosServices
+
         ) : ControllerBase
     {
-
         private readonly IFilmesNetServices _filmesNetServices = iFilmesNetServices;
+
 
         private readonly IDiretoresService _diretoresService = iDiretoresService;
 
         private readonly IGenerosServices _generosService = iGenerosServices;
 
-     /*    [HttpGet("filmes ")]
-        public async Task<ActionResult> GetFilmes() => Ok(await _filmesNetServices.GetFilmes()); */
+        [HttpGet("filmes")]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IEnumerable<Filmes>))]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<ActionResult> GetFilmes()
+        {
+            var getRequest = await _filmesNetServices.GetAllMovies();
+
+            return getRequest is null ? NotFound() : Ok(getRequest);
+        }
+
+        [HttpGet("Diretores")]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IEnumerable<Diretores>))]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<ActionResult> GetAllDiretores()
+        {
+            var getRequest = await _diretoresService.GetAllDiretores();
+
+            return getRequest is null ? NotFound() : Ok(getRequest);
+        }
+
+        [HttpGet("Generos")]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IEnumerable<Generos>))]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<ActionResult> GetAllGeneros()
+        {
+            var getRequest = await _generosService.GetAllGeneros();
+            return getRequest is null ? NotFound() : Ok(getRequest);
+        }
 
         /*[HttpGet("Movies")]
         public async Task<ActionResult> GetFilmes(int pageNumber = 1, int pageSize = 10) => Ok(await _filmesNetServices.GetFilmesAllDatas(pageNumber, pageSize));
 
-        [HttpGet("Diretores")]
-        public async Task<ActionResult> GetAllDiretores() => Ok(await _diretoresService.GetAllDiretores());
-
-        [HttpGet("Generos")]
-        public async Task<ActionResult> GetAllGeneros() => Ok(await _generosService.GetAllGeneros()); */
+         */
 
     }
 }

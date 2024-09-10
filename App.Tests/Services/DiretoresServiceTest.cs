@@ -1,4 +1,3 @@
-using app.Models.Dtos.Diretores;
 using app.Repository;
 using app.Services;
 using App.Tests.Mocks;
@@ -32,7 +31,7 @@ namespace App.Tests.Services
             //Act
             var result = await _iDiretoresService.GetAllDiretores();
 
-            //Assert
+            //AssertApp.Tests/Services/DiretoresServiceTest.cs
             Assert.NotNull(result);
             Assert.Equal(diretoresMock, result);
         }

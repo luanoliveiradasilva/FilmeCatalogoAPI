@@ -5,6 +5,6 @@ namespace app.Services
 {
     public interface IGenerosServices
     {
-        Task<IEnumerable<Generos>> GetAllGeneros();
+        Task<IEnumerable<Generos>?> GetAllGeneros();
     }
 }

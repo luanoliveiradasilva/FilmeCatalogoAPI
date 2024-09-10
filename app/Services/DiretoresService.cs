@@ -9,7 +9,7 @@ namespace app.Services
 
         private readonly IFilmesRepository _iFilmesRepository = iFilmesRepository;
 
-        public async Task<IEnumerable<Diretores>> GetAllDiretores()
+        public async Task<IEnumerable<Diretores>?> GetAllDiretores()
         {
             try
             {

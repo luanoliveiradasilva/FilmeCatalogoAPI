@@ -9,7 +9,7 @@ namespace app.Services
 
         private readonly IFilmesRepository _repository = repository;
 
-        public async Task<IEnumerable<Filmes>> GetAllMovies()
+        public async Task<IEnumerable<Filmes>?> GetAllMovies()
         {
             try
             {
