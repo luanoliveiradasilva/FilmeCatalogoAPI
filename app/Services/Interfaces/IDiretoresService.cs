@@ -1,5 +1,4 @@
 using app.Models;
-using app.Models.Dtos.Diretores;
 
 namespace app.Services
 {

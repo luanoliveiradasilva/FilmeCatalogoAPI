@@ -1,9 +1,10 @@
 using app.Controllers;
 using app.Models;
+using app.Models.Dtos.Diretores;
 using app.Models.Dtos.Filmes;
+using app.Models.Dtos.Generos;
 using app.Services;
 using App.Tests.Mocks;
-using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
 
@@ -90,7 +91,7 @@ namespace App.Tests.Controller
         }
 
         [Fact]
-        public async void ShouldGetAllDiretores()
+        public async void ShouldGetAllDiretores200OK()
         {
             //Arrange
             var mockDiretores = MockFilmesRepository.DiretoresMock();
@@ -104,6 +105,31 @@ namespace App.Tests.Controller
 
             //Assert
             Assert.True(result is OkObjectResult);
+        }
+
+        [Fact]
+        public async void ShouldGetAllDiretoresDto()
+        {
+            //Arrange
+            var mockDiretores = MockFilmesRepository.DiretoresMock();
+            var mockDto = mockDiretores.Select(d => new DiretoresDto()
+            {
+                NomeDiretor = d.NomeDiretor
+            }).ToList();
+
+            _mockDiretoresServices
+            .Setup(s => s.GetAllDiretores())
+            .ReturnsAsync(mockDiretores);
+
+            //Act
+            var result = await _filmesNetController.GetAllDiretores();
+
+            //Assert
+            var actualResponse = Assert.IsType<OkObjectResult>(result);
+            var actualDtos = Assert.IsAssignableFrom<IEnumerable<DiretoresDto>>(actualResponse.Value);
+
+            Assert.Equal(mockDto.Count, actualDtos.Count());
+            Assert.Equal(mockDto.First().NomeDiretor, actualDtos.First().NomeDiretor);
         }
 
         [Fact]
@@ -122,7 +148,7 @@ namespace App.Tests.Controller
         }
 
         [Fact]
-        public async void ShouldGetAllGeneros()
+        public async void ShouldGetAllGeneros200Ok()
         {
             //Arrange
             var mockGenero = MockFilmesRepository.GenerosMock();
@@ -136,6 +162,30 @@ namespace App.Tests.Controller
 
             //Assert
             Assert.True(result is OkObjectResult);
+        }
+
+        [Fact]
+        public async void ShouldGetAllGenerosDto()
+        {
+            //Arrange
+            var mockGenero = MockFilmesRepository.GenerosMock();
+            var mockDtos = mockGenero.Select(g => new GenerosDto()
+            {
+                TipoDoGenero = g.TipoDoGenero,
+            }).ToList();
+
+            _mockGenerosServices
+            .Setup(s => s.GetAllGeneros())
+            .ReturnsAsync(mockGenero);
+
+            //Act
+            var result = await _filmesNetController.GetAllGeneros();
+
+            //Assert
+            var actualResponse = Assert.IsType<OkObjectResult>(result);
+            var actualDtos = Assert.IsAssignableFrom<IEnumerable<GenerosDto>>(actualResponse.Value);
+
+            Assert.Equal(mockDtos.Count, actualDtos.Count());
         }
 
         [Fact]

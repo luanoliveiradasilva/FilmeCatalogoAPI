@@ -49,34 +49,5 @@ namespace App.Tests.Services
             //Assert
             Assert.Equal("Error not found", exception.Message);
         }
-
-        /* [Fact]
-         public async void ShouldReturnListOfDiretores()
-         {
-             //Arrange(Give)
-             var DiretoresDtoFake = new List<DiretoresDto>
-             {
-                 new()
-                 {
-                     NomeDiretor = "Nome diretor Teste"
-                 },
-                 new()
-                 {
-                     NomeDiretor = "Nome diretor Teste 2"
-                 }
-             };
-
-             _mockRepository
-             .Setup(repo => repo.GetAllDiretoresAsync())
-             .ReturnsAsync(DiretoresDtoFake);
-
-             //Act(When)
-             var result = await _iDiretoresService.GetAllDiretores();
-
-             //Assert(Then)
-             Assert.NotNull(result);
-             Assert.Equal(DiretoresDtoFake, result);
-         }
-      */
     }
 }

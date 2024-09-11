@@ -1,5 +1,7 @@
 using app.Models;
+using app.Models.Dtos.Diretores;
 using app.Models.Dtos.Filmes;
+using app.Models.Dtos.Generos;
 using app.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -45,7 +47,15 @@ namespace app.Controllers
         {
             var getRequest = await _diretoresService.GetAllDiretores();
 
-            return getRequest is null ? NotFound() : Ok(getRequest);
+            if (getRequest is null)
+                return NotFound();
+
+            var response = getRequest.Select(dir => new DiretoresDto
+            {
+                NomeDiretor = dir.NomeDiretor
+            });
+
+            return Ok(response);
         }
 
         [HttpGet("Generos")]
@@ -54,13 +64,16 @@ namespace app.Controllers
         public async Task<ActionResult> GetAllGeneros()
         {
             var getRequest = await _generosService.GetAllGeneros();
-            return getRequest is null ? NotFound() : Ok(getRequest);
+
+            if (getRequest is null)
+                return NotFound();
+
+            var response = getRequest.Select(ger => new GenerosDto
+            {
+                TipoDoGenero = ger.TipoDoGenero
+            });
+
+            return Ok(response);
         }
-
-        /*[HttpGet("Movies")]
-        public async Task<ActionResult> GetFilmes(int pageNumber = 1, int pageSize = 10) => Ok(await _filmesNetServices.GetFilmesAllDatas(pageNumber, pageSize));
-
-         */
-
     }
 }

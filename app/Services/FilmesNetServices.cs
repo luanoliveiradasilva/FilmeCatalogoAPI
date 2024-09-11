@@ -1,6 +1,5 @@
 using app.Models;
 using app.Repository;
-using AutoMapper;
 
 namespace app.Services
 {
@@ -21,13 +20,5 @@ namespace app.Services
                 throw new Exception("Error not found", ex);
             }
         }
-
-        /* 
-       public async Task<IEnumerable<FilmesDto>> GetFilmes() => await _repository.GetFilmesAsync();
-
-       public async Task<IEnumerable<FilmesAllDTO>> GetFilmesAllDatas(int pageNumber, int pageSize)
-       {
-           return await _repository.GetFilmesAllDatasAsync(pageNumber, pageSize);
-       } */
     }
 }
