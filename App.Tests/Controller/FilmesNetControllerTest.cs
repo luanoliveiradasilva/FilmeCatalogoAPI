@@ -1,7 +1,9 @@
 using app.Controllers;
 using app.Models;
+using app.Models.Dtos.Filmes;
 using app.Services;
 using App.Tests.Mocks;
+using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
 
@@ -28,7 +30,7 @@ namespace App.Tests.Controller
         }
 
         [Fact]
-        public async void ShouldGetAllFilmes()
+        public async void ShouldGetReturn200Ok()
         {
             //Arrange
             var mockMovies = MockFilmesRepository.FilmesMock();
@@ -40,8 +42,36 @@ namespace App.Tests.Controller
             //Act
             var result = await _filmesNetController.GetFilmes();
 
-            //Assert
+            //Asset
             Assert.True(result is OkObjectResult);
+        }
+
+        [Fact]
+        public async void GetFilmesReturnsFilmesWithDto()
+        {
+            // Arrange
+            var mockMovies = MockFilmesRepository.FilmesMock();
+
+            var mockDtos = mockMovies.Select(f => new FilmesDto
+            {
+                NomeFilme = f.NomeFilme,
+                DataLancamento = f.DataLancamento,
+                Descricao = f.Descricao
+            }).ToList();
+
+            _mockFilmesServices
+                .Setup(s => s.GetAllMovies())
+                .ReturnsAsync(mockMovies);
+
+            // Act
+            var result = await _filmesNetController.GetFilmes();
+
+            // Assert
+            var actualResponse = Assert.IsType<OkObjectResult>(result);
+            var actualDtos = Assert.IsAssignableFrom<IEnumerable<FilmesDto>>(actualResponse.Value);
+
+            Assert.Equal(mockDtos.Count, actualDtos.Count());
+            Assert.Equal(mockDtos.First().NomeFilme, actualDtos.First().NomeFilme);
         }
 
         [Fact]

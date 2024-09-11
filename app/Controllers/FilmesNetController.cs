@@ -1,4 +1,5 @@
 using app.Models;
+using app.Models.Dtos.Filmes;
 using app.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -13,11 +14,9 @@ namespace app.Controllers
         ) : ControllerBase
     {
         private readonly IFilmesNetServices _filmesNetServices = iFilmesNetServices;
-
-
         private readonly IDiretoresService _diretoresService = iDiretoresService;
-
-        private readonly IGenerosServices _generosService = iGenerosServices;
+        private readonly IGenerosServices _generosService =
+        iGenerosServices;
 
         [HttpGet("filmes")]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IEnumerable<Filmes>))]
@@ -26,7 +25,17 @@ namespace app.Controllers
         {
             var getRequest = await _filmesNetServices.GetAllMovies();
 
-            return getRequest is null ? NotFound() : Ok(getRequest);
+            if (getRequest is null)
+                return NotFound();
+
+            var response = getRequest.Select(filmes => new FilmesDto
+            {
+                NomeFilme = filmes.NomeFilme,
+                DataLancamento = filmes.DataLancamento,
+                Descricao = filmes.Descricao
+            });
+
+            return Ok(response);
         }
 
         [HttpGet("Diretores")]

@@ -1,12 +1,12 @@
 using app.Models;
 using app.Repository;
-using Microsoft.Extensions.Logging;
+using AutoMapper;
 
 namespace app.Services
 {
-    public class FilmesNetServices(IFilmesRepository repository) : IFilmesNetServices
+    public class FilmesNetServices(
+        IFilmesRepository repository) : IFilmesNetServices
     {
-
         private readonly IFilmesRepository _repository = repository;
 
         public async Task<IEnumerable<Filmes>?> GetAllMovies()
@@ -21,6 +21,7 @@ namespace app.Services
                 throw new Exception("Error not found", ex);
             }
         }
+
         /* 
        public async Task<IEnumerable<FilmesDto>> GetFilmes() => await _repository.GetFilmesAsync();
 

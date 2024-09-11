@@ -1,4 +1,5 @@
 using app.Models;
+using app.Models.Dtos.Filmes;
 
 namespace app.Repository
 {
@@ -7,10 +8,7 @@ namespace app.Repository
         Task<IEnumerable<Filmes>> GetAllFilmes();
         Task<IEnumerable<Diretores>> GetAllDiretores();
         Task<IEnumerable<Generos>> GetAllGeneros();
-        /*         Task<IEnumerable<FilmesDto>> GetFilmesAsync();
-                Task<IEnumerable<FilmesAllDTO>> GetFilmesAllDatasAsync(int pageNumber, int pageSize);
-                Task<IEnumerable<DiretoresDto>> GetAllDiretoresAsync();
-                Task<IEnumerable<GenerosDto>> GetAllGenerosAsync(); */
+        Task<IEnumerable<FilmesDto>> GetFilmesAsync(int pageNumber, int pageSize);
 
     }
 }
